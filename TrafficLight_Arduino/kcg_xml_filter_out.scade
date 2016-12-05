@@ -1,0 +1,83 @@
+/* $**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config C:/TrafficLight/DML/KCG/config.txt
+** Generation date: 2016-12-05T10:47:32
+*************************************************************$ */
+
+/* xscade source: C:/TrafficLight/DML/TrafficLight.xscade */
+package TrafficLight
+  const DEBOUNCE_CYCLES : int = 80;
+  
+  const LIGHT1_ID1 : int = 2;
+  
+  const LIGHT2_ID1 : int = 8;
+  
+  node Main(push_button : bool) returns (light_cmd : int)
+  var
+    _L1 : bool;
+    _L3 : int;
+    _L4 : bool;
+    _L10 : int;
+    _L11 : int;
+  let
+    _L1= push_button;
+    light_cmd= _L3;
+    _L3= #1 if _L4 then (_L11) else (_L10);
+    _L4= #1 ToggleDebounce(_L1, DEBOUNCE_CYCLES);
+    _L10= LIGHT1_ID1;
+    _L11= LIGHT2_ID1;
+  tel
+  
+  node ToggleDebounce(x : bool; time : int) returns (y : bool last = false)
+  var
+    rising_edge : bool;
+    counter : int default = 0;
+    _L1 : bool;
+    _L2 : bool;
+    _L7 : bool;
+    _L8 : bool;
+  let
+    _L1= x;
+    _L2= #1 fby(_L1; 1; false);
+    rising_edge= _L8;
+    
+    automaton SM1
+      initial state Normal
+        var
+          _L7 : bool;
+          _L10 : bool;
+          _L11 : bool;
+        let
+          y= _L10;
+          _L7= last 'y;
+          _L10= _L7 #2 xor _L11;
+          _L11= rising_edge;
+        tel
+        until
+          if rising_edge restart InhibitInput;
+
+      state InhibitInput
+        var
+          _L5 : int;
+          _L9 : int;
+          _L11 : int;
+          _L12 : int;
+        let
+          _L5= _L12 #1 + _L9;
+          counter= _L5;
+          _L9= 1;
+          _L11= counter;
+          _L12= #2 fby(_L11; 1; 0);
+        tel
+        until
+          if counter #1 > time do let tel restart Normal;
+    returns ..;
+    _L7= #1 not _L2;
+    _L8= _L7 #1 and _L1;
+  tel
+  
+end;
+
+/* $**************** KCG Version 6.4 (build i21) ****************
+** -
+** Generation date: 2016-12-05T10:47:32
+*************************************************************$ */
