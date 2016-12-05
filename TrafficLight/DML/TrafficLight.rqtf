@@ -1,0 +1,24 @@
+[Files]
+Names=Requirements,SCADE Design
+RepositoryTool=Boost
+
+[Requirements]
+Cover1=SCADE Design
+Cover1Position=2385@2315
+GraphicPosition=2370@1580
+Type=Word TrafficLight
+Path=Requirements.doc
+AbsolutePath=C:\Users\U04820\Documents\99_Research\Seminari Unige\Corso tacchella - 2016\TrafficLight\DML\Requirements.doc
+
+[SCADE Design]
+GraphicPosition=2400@3050
+Variable1Name=icon
+Variable1Value=../icons/Suite/Suite.png
+Variable2Name=dateFiles
+Variable2Value=Main.xscade¥ToggleDebounce.xscade¥TrafficLight.xscade¥TrafficLight.trace
+Variable3Name=withImages
+Variable3Value=0
+Type=SCADE
+Path=TrafficLight.etp
+AbsolutePath=C:\Users\U04820\Documents\99_Research\Seminari Unige\Corso tacchella - 2016\TrafficLight\DML\TrafficLight.etp
+

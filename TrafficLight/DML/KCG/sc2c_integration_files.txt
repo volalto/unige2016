@@ -1,0 +1,30 @@
+*****************************
+*** Generated KCG H files ***
+*****************************
+Main_TrafficLight.h
+ToggleDebounce_TrafficLight.h
+kcg_types.h
+kcg_consts.h
+kcg_sensors.h
+
+*****************************
+*** Generated KCG C files ***
+*****************************
+Main_TrafficLight.c
+ToggleDebounce_TrafficLight.c
+kcg_types.c
+kcg_consts.c
+
+*****************************
+*** Generated SC2C Files  ***
+*****************************
+user_macros.h
+kcg_imported_types.h
+
+*****************************
+*** Include Directories   ***
+*****************************
+.
+$(SCADE)
+$(SCADE)\include
+

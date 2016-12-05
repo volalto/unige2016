@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project id="1" oid_count="54" defaultConfiguration="13">
+	<props>
+		<Prop id="2" name="@STUDIO:PRODUCT">
+			<value>QTE</value>
+		</Prop>
+		<Prop id="5" name="@STUDIO:TITLE">
+			<value>&lt;title&gt;</value>
+		</Prop>
+		<Prop id="6" name="@STUDIO:SUBTITLE">
+			<value>&lt;subtitle&gt;</value>
+		</Prop>
+		<Prop id="7" name="@STUDIO:DESCRIPTION">
+			<value>&lt;description&gt;</value>
+		</Prop>
+		<Prop id="8" name="@STUDIO:AUTHORS">
+			<value>&lt;authors&gt;</value>
+		</Prop>
+		<Prop id="9" name="@STUDIO:COMPAGNY">
+			<value>&lt;company&gt;</value>
+		</Prop>
+		<Prop id="10" name="@STUDIO:DATE">
+			<value>&lt;date&gt;</value>
+		</Prop>
+		<Prop id="11" name="@STUDIO:INDEX">
+			<value>&lt;index&gt;</value>
+		</Prop>
+		<Prop id="12" name="@STUDIO:REFERENCE">
+			<value>&lt;reference&gt;</value>
+		</Prop>
+		<Prop id="14" name="@STUDIO:TOOLCONF">
+			<value>QTE</value>
+			<value>13</value>
+		</Prop>
+		<Prop id="15" name="@STUDIO:TOOLCONF">
+			<value>Reporter</value>
+			<value>13</value>
+		</Prop>
+		<Prop id="16" name="@REPORTER:SCRIPT">
+			<value>Reporter/QteReport.tcl</value>
+			<configuration>13</configuration>
+		</Prop>
+		<Prop id="18" name="@QTE:SOURCE_MODEL">
+			<value>..\..\DML\TrafficLight.etp</value>
+		</Prop>
+		<Prop id="19" name="@STUDIO:TOOLCONF">
+			<value>Code Generator</value>
+			<value>13</value>
+		</Prop>
+		<Prop id="20" name="@STUDIO:TOOLCONF">
+			<value>Dashboard</value>
+			<value>13</value>
+		</Prop>
+		<Prop id="21" name="@STUDIO:TOOLCONF">
+			<value>Synchronization</value>
+			<value>13</value>
+		</Prop>
+		<Prop id="22" name="@STUDIO:TOOLCONF">
+			<value>Timing and Stack Analysis Tools</value>
+			<value>13</value>
+		</Prop>
+		<Prop id="23" name="@STUDIO:TOOLCONF">
+			<value>DiffAnalyzer</value>
+			<value>13</value>
+		</Prop>
+		<Prop id="24" name="@STUDIO:TOOLCONF">
+			<value>Instrumenter</value>
+			<value>13</value>
+		</Prop>
+		<Prop id="25" name="@STUDIO:TOOLCONF">
+			<value>Test Tool</value>
+			<value>13</value>
+		</Prop>
+		<Prop id="28" name="@QTE:TEE_DETAILS_FAILED">
+			<value>true</value>
+			<configuration>13</configuration>
+		</Prop>
+		<Prop id="29" name="@QTE:TEE_CONF">
+			<value>KCG</value>
+			<configuration>13</configuration>
+		</Prop>
+		<Prop id="30" name="@QTE:TEE_NO_BUILD">
+			<value>true</value>
+			<configuration>13</configuration>
+		</Prop>
+		<Prop id="46" name="@QTE:MTC_CONF">
+			<value>MTC</value>
+			<configuration>13</configuration>
+		</Prop>
+		<Prop id="53" name="@MTC:INSTRUMENTED_MODEL">
+			<value>..\..\TrafficLight_MTC_INST\MTC\TrafficLight_MTC_INST.etp</value>
+		</Prop>
+	</props>
+	<roots>
+		<Folder id="3" extensions="etp;vsp" name="Model">
+			<elements>
+				<FileRef id="54" persistAs="..\..\DML\TrafficLight.etp"/>
+			</elements>
+		</Folder>
+		<Folder id="4" extensions="stp" name="Tests">
+			<elements>
+				<FileRef id="39" persistAs="..\TP\TrafficLight_TP_002.stp"/>
+				<FileRef id="40" persistAs="..\TP\TrafficLight_TP_001.stp"/>
+			</elements>
+		</Folder>
+		<Folder id="31" extensions="trf" name="Results">
+			<elements>
+				<FileRef id="44" persistAs="TrafficLight_TP_001.trf"/>
+				<FileRef id="45" persistAs="TrafficLight_TP_002.trf"/>
+			</elements>
+		</Folder>
+		<Folder id="41" extensions="sss;csv" name="Scenarios">
+			<elements>
+				<FileRef id="42" persistAs="..\TC\TrafficLight_TC_001.csv"/>
+				<FileRef id="43" persistAs="..\TC\TrafficLight_TC_002.csv"/>
+			</elements>
+		</Folder>
+		<Folder id="47" extensions="cdf" name="Criteria Files">
+			<elements>
+				<FileRef id="48" persistAs="QTE_MTC\MTC_TrafficLight_TrafficLight_TP_002.cdf"/>
+				<FileRef id="49" persistAs="QTE_MTC\MTC_TrafficLight_TrafficLight_TP_001.cdf"/>
+			</elements>
+		</Folder>
+		<Folder id="50" extensions="crf" name="Coverage Files">
+			<elements>
+				<FileRef id="51" persistAs="QTE_MTC\MTC_TrafficLight_TrafficLight_TP_002.crf"/>
+				<FileRef id="52" persistAs="QTE_MTC\MTC_TrafficLight_TrafficLight_TP_001.crf"/>
+			</elements>
+		</Folder>
+	</roots>
+	<configurations>
+		<Configuration id="13" name="QTE"/>
+	</configurations>
+</Project>

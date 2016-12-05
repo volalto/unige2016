@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--$**************** KCG Version 6.4 (build i21) ****************
+** Command: kcg64.exe -config C:/TrafficLight/DML/KCG/config.txt
+** Generation date: 2016-12-05T10:47:32
+*************************************************************$-->
+<Model date="2016-12-05T10:47:32" commandLine="kcg64.exe -config C:/TrafficLight/DML/KCG/config.txt">
+  <Option name="xml_basename" value="kcg_xml_filter_out.scade"/>
+  <Option name="xml_filter" value="#off#"/>
+  <Option name="state_vector" value="#off#"/>
+  <Option name="static" value="#off#"/>
+  <Option name="warn_error" value="#off#"/>
+  <Option name="no_bitwise" value="#off#"/>
+  <Option name="wrap_c_ops" value="#off#"/>
+  <Option name="input_file" value="C:/TrafficLight/DML/TrafficLight.xscade"/>
+  <Option name="probes" value="#off#"/>
+  <Option name="debug" value="#off#"/>
+  <Option name="no_observe" value="#off#"/>
+  <Option name="observe" value="#off#"/>
+  <Option name="user_config" value="./user_macros.h"/>
+  <Option name="input_threshold" value="#off#"/>
+  <Option name="header" value="#off#"/>
+  <Option name="significance_length" value="31"/>
+  <Option name="name_length" value="200"/>
+  <Option name="globals_prefix" value="#off#"/>
+  <Option name="macro_on_assert" value="#off#"/>
+  <Option name="optimization_level" value="3"/>
+  <Option name="global_root_context" value="#off#"/>
+  <Option name="expall" value="#off#"/>
+  <Option name="noexp" value="#off#"/>
+  <Option name="exp" value="#off#"/>
+  <Option name="target_dir" value="C:/TrafficLight/DML/KCG"/>
+  <Option name="target" value="C"/>
+  <Option name="node" value="TrafficLight::Main"/>
+  <Option name="auth" value="#off#"/>
+  <Package scadeName="TrafficLight">
+    <Constant scadeName="DEBOUNCE_CYCLES" scadeType="int" targetName="DEBOUNCE_CYCLES_TrafficLight" targetType="kcg_int"
+        macroDef="true"/>
+    <Constant scadeName="LIGHT1_ID1" scadeType="int" targetName="LIGHT1_ID1_TrafficLight" targetType="kcg_int"
+        macroDef="true"/>
+    <Constant scadeName="LIGHT2_ID1" scadeType="int" targetName="LIGHT2_ID1_TrafficLight" targetType="kcg_int"
+        macroDef="true"/>
+    <RootNode scadeName="Main" headerFile="Main_TrafficLight.h" targetCycleFct="Main_TrafficLight"
+        targetInitFct="Main_reset_TrafficLight" targetInitializationFct="Main_init_TrafficLight">
+      <Input scadeName="push_button" scadeType="bool" targetName="push_button" targetType="kcg_bool" inCtx="true"/>
+      <Output scadeName="light_cmd" scadeType="int" targetName="light_cmd" targetType="kcg_int" inCtx="true"/>
+      <Local scadeName="_L1" scadeType="bool" targetName="push_button" targetType="kcg_bool"/>
+      <Local scadeName="_L3" scadeType="int" targetName="light_cmd" targetType="kcg_int" inCtx="true"/>
+      <NodeInstance scadeName="if" instName="1"/>
+      <NodeInstance scadeName="TrafficLight::ToggleDebounce" instName="1" refName="ToggleDebounce_TrafficLight">
+        <OutCtxVar targetName="Context_1"/>
+      </NodeInstance>
+      <OutCtxType targetName="outC_Main_TrafficLight"/>
+      <InCtxType targetName="inC_Main_TrafficLight"/>
+    </RootNode>
+    <NoExpNode scadeName="ToggleDebounce" headerFile="ToggleDebounce_TrafficLight.h"
+        targetCycleFct="ToggleDebounce_TrafficLight" targetInitFct="ToggleDebounce_reset_TrafficLight"
+        targetInitializationFct="ToggleDebounce_init_TrafficLight">
+      <Input scadeName="x" scadeType="bool" targetName="x" targetType="kcg_bool"/>
+      <Input scadeName="time" scadeType="int" targetName="time" targetType="kcg_int"/>
+      <Output scadeName="y" scadeType="bool" targetName="y" targetType="kcg_bool" mem="true" inCtx="true"/>
+      <Local scadeName="rising_edge" scadeType="bool" targetName="rising_edge" targetType="kcg_bool"/>
+      <Local scadeName="_L1" scadeType="bool" targetName="x" targetType="kcg_bool"/>
+      <Local scadeName="_L8" scadeType="bool" targetName="rising_edge" targetType="kcg_bool"/>
+      <FbyOp instName="1">
+        <Init targetName="init1" targetType="kcg_bool" inCtx="true"/>
+        <Memory targetName="rem_x" targetType="kcg_bool" inCtx="true"/>
+      </FbyOp>
+      <Automaton scadeName="SM1" targetStatesType="SSM_ST_SM1" targetTransitionsType="SSM_TR_SM1">
+        <State scadeName="Normal" targetName="SSM_st_Normal_SM1">
+          <Last>
+            <Memory targetName="y" targetType="kcg_bool" inCtx="true"/>
+          </Last>
+          <NodeInstance scadeName="xor" instName="2"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_Normal_1_SM1" kind="weak" scadeDest="InhibitInput"/>
+          </Fork>
+        </State>
+        <State scadeName="InhibitInput" targetName="SSM_st_InhibitInput_SM1">
+          <Memory scadeName="_L5" scadeType="int" targetName="_L5_SM1_InhibitInput" targetType="kcg_int"
+              clockVar="SM1_state_act" clockVal="SSM_st_InhibitInput_SM1" inCtx="true"/>
+          <Memory scadeName="_L11" scadeType="int" targetName="_L5_SM1_InhibitInput" targetType="kcg_int"
+              clockVar="SM1_state_act" clockVal="SSM_st_InhibitInput_SM1" inCtx="true"/>
+          <NodeInstance scadeName="+" instName="1"/>
+          <FbyOp instName="2">
+            <Memory targetName="_L5_SM1_InhibitInput" targetType="kcg_int" clockVar="SM1_state_act"
+                clockVal="SSM_st_InhibitInput_SM1" inCtx="true"/>
+            <Init targetName="init" targetType="kcg_bool" clockVar="SM1_state_act" clockVal="SSM_st_InhibitInput_SM1"
+                inCtx="true"/>
+          </FbyOp>
+          <Fork priority="1">
+            <Condition>
+              <NodeInstance scadeName="&gt;" instName="1"/>
+            </Condition>
+            <Transition targetName="SSM_TR_InhibitInput_1_SM1" kind="weak" scadeDest="Normal"/>
+          </Fork>
+          <Memory targetName="_L5_SM1_InhibitInput" targetType="kcg_int" clockVar="SM1_state_act"
+              clockVal="SSM_st_InhibitInput_SM1" inCtx="true"/>
+        </State>
+        <ActiveState targetName="SM1_state_act"/>
+        <NextState targetName="SM1_state_nxt" mem="true" inCtx="true"/>
+        <ResetNextState targetName="SM1_reset_nxt" mem="true" inCtx="true"/>
+        <ResetSelectedState targetName="SM1_reset_sel"/>
+      </Automaton>
+      <NodeInstance scadeName="not" instName="1"/>
+      <NodeInstance scadeName="and" instName="1"/>
+      <Init targetName="init1" targetType="kcg_bool" inCtx="true"/>
+      <Init targetName="init" targetType="kcg_bool" clockVar="SM1_state_act" clockVal="SSM_st_InhibitInput_SM1"
+          inCtx="true"/>
+      <Memory scadeName="x" scadeType="bool" targetName="rem_x" targetType="kcg_bool" inCtx="true"/>
+      <OutCtxType targetName="outC_ToggleDebounce_TrafficLight"/>
+    </NoExpNode>
+  </Package>
+  <PredefType scadeName="real" targetName="kcg_real"/>
+  <PredefType scadeName="bool" targetName="kcg_bool"/>
+  <PredefType scadeName="char" targetName="kcg_char"/>
+  <PredefType scadeName="int" targetName="kcg_int"/>
+</Model>
+<!--$**************** KCG Version 6.4 (build i21) ****************
+** kcg_trace.xml
+** Generation date: 2016-12-05T10:47:32
+*************************************************************$-->

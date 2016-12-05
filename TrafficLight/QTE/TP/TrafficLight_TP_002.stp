@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Procedure oid="D58C12EF-AB06-4851-960F-6B0490242233" name="TrafficLight_TP_002" operator="TrafficLight::Main">
+	<testElements>
+		<Record oid="8E587FEF-9811-4184-81AF-39380FBDEC35" name="Record1" description="Record1">
+			<scenarios>
+				<Scenario oid="AEA62F3A-AB8A-4779-A0AA-4121DD76B949" persistAs="..\TC\TrafficLight_TC_002.csv"/>
+			</scenarios>
+		</Record>
+	</testElements>
+</Procedure>

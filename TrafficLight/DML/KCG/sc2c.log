@@ -1,0 +1,40 @@
+$**************  SCADETOC Version R16 (build i21) **************
+** Generation date: 2016-12-05T10:47:32
+** Command: scade -code "C:\TrafficLight\DML\TrafficLight.etp" -root TrafficLight::Main -conf KCG
+*************************************************************$
+*** Generated Files Information (GENFIL): KCG- Generated files
+ ~kcg_trace.xml
+  at file C:\TrafficLight\DML\KCG\kcg_trace.xml, line 0, character 0
+ ~kcg_metrics.txt
+  at file C:\TrafficLight\DML\KCG\kcg_metrics.txt, line 0, character 0
+ ~Main_TrafficLight.c
+  at file C:\TrafficLight\DML\KCG\Main_TrafficLight.c, line 0, character 0
+ ~ToggleDebounce_TrafficLight.c
+  at file C:\TrafficLight\DML\KCG\ToggleDebounce_TrafficLight.c, line 0, character 0
+ ~Main_TrafficLight.h
+  at file C:\TrafficLight\DML\KCG\Main_TrafficLight.h, line 0, character 0
+ ~ToggleDebounce_TrafficLight.h
+  at file C:\TrafficLight\DML\KCG\ToggleDebounce_TrafficLight.h, line 0, character 0
+ ~kcg_types.h
+  at file C:\TrafficLight\DML\KCG\kcg_types.h, line 0, character 0
+ ~kcg_consts.h
+  at file C:\TrafficLight\DML\KCG\kcg_consts.h, line 0, character 0
+ ~kcg_sensors.h
+  at file C:\TrafficLight\DML\KCG\kcg_sensors.h, line 0, character 0
+ ~kcg_types.c
+  at file C:\TrafficLight\DML\KCG\kcg_types.c, line 0, character 0
+ ~kcg_consts.c
+  at file C:\TrafficLight\DML\KCG\kcg_consts.c, line 0, character 0
+*** Generated Files Information (GENFIL): Code Generator Generated files
+ ~user_macros.h
+  at file C:\TrafficLight\DML\KCG\user_macros.h, line 0, character 0
+ ~kcg_imported_types.h
+  at file C:\TrafficLight\DML\KCG\kcg_imported_types.h, line 0, character 0
+ ~sc2c.log
+  at file C:\TrafficLight\DML\KCG\sc2c.log, line 0, character 0
+ ~sc2c_integration_files.txt
+  at file C:\TrafficLight\DML\KCG\sc2c_integration_files.txt, line 0, character 0
+$**************  SCADETOC Version R16 (build i21) **************
+** Generation date: 2016-12-05T10:47:32
+** sc2c.log
+*************************************************************$

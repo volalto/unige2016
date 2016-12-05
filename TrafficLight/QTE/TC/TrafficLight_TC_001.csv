@@ -1,0 +1,8 @@
+#$CsvFormat=1;;;;;;;;
+;*SCRIPT*;;;;Repeat 21;;Repeat 20;Last
+# Cycle;;1;2;3;4;25;26;46
+#;;1;1;1;21;1;20;
+# Inputs;;;;;;;;
+TrafficLight::Main/push_button;;false;false;true;false;true;false;false
+# Outputs;;;;;;;;
+TrafficLight::Main/light_cmd;;6;6;8;8;6;6;6

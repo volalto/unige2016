@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/4" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/2">
+	<declarations>
+		<Package name="TrafficLight">
+			<declarations>
+				<Constant name="DEBOUNCE_CYCLES">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="80"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/e0/5A7F/4E4/583fcfcc4b59" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+							<comment>4 seconds at 20 Hz</comment>
+						</ed:Constant>
+					</pragmas>
+				</Constant>
+				<Constant name="LIGHT1_ID1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="2"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/ef/5A7F/4E4/583fcfcc7b3c"/>
+					</pragmas>
+				</Constant>
+				<Constant name="LIGHT2_ID1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="8"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="!ed/fe/5A7F/4E4/583fcfcc7785"/>
+					</pragmas>
+				</Constant>
+				<Operator name="Main" href="Main.xscade"/>
+				<Operator name="ToggleDebounce" href="ToggleDebounce.xscade"/>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/ff/5A7F/4E4/583fcfd12cc6" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/5">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/100/5A7F/4E4/583fcfd12e4d" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/101/5A7F/4E4/583fcfd131c8" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/102/5A7F/4E4/583fcfd1b53" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<traceability>
+	<object id="!ed/e0/5A7F/4E4/583fcfcc4b59">
+		<requirement id="[SW_07]"/>
+		<requirement id="[SW_08]"/>
+	</object>
+	<object id="!ed/ef/5A7F/4E4/583fcfcc7b3c">
+		<requirement id="[SW_03]"/>
+	</object>
+	<object id="!ed/fe/5A7F/4E4/583fcfcc7785">
+		<requirement id="[SW_04]"/>
+	</object>
+	<object id="!ed/31/5A7F/4E4/583fcfa3b03">
+		<requirement id="[SW_01]"/>
+		<requirement id="[SW_02]"/>
+		<requirement id="[SW_03]"/>
+		<requirement id="[SW_04]"/>
+		<requirement id="[SW_05]"/>
+		<requirement id="[SW_06]"/>
+		<requirement id="[SW_07]"/>
+	</object>
+	<object id="!ed/37/5A7F/4E4/583fcfa347cf">
+		<requirement id="[SW_02]"/>
+		<requirement id="[SW_03]"/>
+		<requirement id="[SW_04]"/>
+		<requirement id="[SW_06]"/>
+	</object>
+	<object id="!ed/38/5A7F/4E4/583fcfa34610">
+		<requirement id="[SW_01]"/>
+		<requirement id="[SW_06]"/>
+	</object>
+	<object id="!ed/be/5A7F/4E4/583fcfa3128c">
+		<requirement id="[SW_07]"/>
+	</object>
+</traceability>
