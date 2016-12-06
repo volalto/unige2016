@@ -6,8 +6,6 @@
  * The program is distributed under the terms of the GNU General Public License v3.
  */
 
-typedef unsigned long time_t;
-
 /* Include SCADE generated code */
 extern "C"
 {
@@ -46,18 +44,16 @@ void led_driver(int led_on)
 
 void loop() {
 
-  time_t timestart = millis();
-
   /***** Partition TrafficLight *******************/
 
   /* Read model inputs from HW */
-  in_struct.push_button = digitalRead(BUTTON_PIN);
+  in_struct.push_button = (kcg_bool) digitalRead(BUTTON_PIN);
   
   /* Call model main fuction */
   Main_TrafficLight(&in_struct, &out_struct);
  
   /* Write model outputs to HW */
-  led_driver(out_struct.light_cmd);
+  led_driver((int) out_struct.light_cmd);
   
   /************************************************/
 
